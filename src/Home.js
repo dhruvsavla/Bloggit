@@ -1,11 +1,14 @@
 import React from 'react'
 import Blog from "./Blog.js"
 import "./Home.css"
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
       <div className='home'>
-        <div className='home_row'>
+          < Link to = "/details">
+          <div className='home_row'>
+              
                     <Blog
                       id = '1234567'
                       title='Future of Technology'
@@ -56,8 +59,11 @@ function Home() {
                       author='Dhruv Savla'
                       img='https://m.media-amazon.com/images/I/81Nnn3Rn7FL._AC_SX679_.jpg'
                       date={5} />
+
+            
                  
-              </div>
+          </div>
+          </Link>
     </div>
   )
 }

@@ -1,3 +1,7 @@
+*{
+    text-decoration: none;
+}
+
 .home_row{
     display: flex;
     z-index: 1;
