@@ -1,0 +1,22 @@
+.BlogDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.BlogDetails img{
+    align-items: center;
+    width: 80%;
+    height: 450px;
+}
+
+.BlogDetails p{
+    width: 80%;
+    line-height: 2;
+}
+
+.BlogDetails h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

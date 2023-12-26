@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
       <div className='home'>
-          < Link to = "/details">
           <div className='home_row'>
               
                     <Blog
@@ -58,12 +57,8 @@ function Home() {
                       species, ranging across all continents except Antarctica '
                       author='Dhruv Savla'
                       img='https://m.media-amazon.com/images/I/81Nnn3Rn7FL._AC_SX679_.jpg'
-                      date={5} />
-
-            
-                 
+                      date={5} />      
           </div>
-          </Link>
     </div>
   )
 }

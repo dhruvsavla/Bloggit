@@ -10,20 +10,26 @@ function Header() {
           <Link to = "/">
               <img className='header_logo' src={logo} />
           </Link>
-          <Link to = "/">
+          
           <div className = 'name'>
-              <h1>
+          <Link to = "/">
+              <h1 style={{color: 'black'}}>
                   bloggit
               </h1>
+          </Link>
               <p>Welcome, Dhruv Savla </p>
             </div>
-            </Link>
+            
           <div className='header_nav'>
             <input className='header_searchInput' type='text'/>
               <FaSearch style={{background: 'orange', height: '25px', marginRight:'30px'}} />
-              <span><p>write blog</p></span>
+              <Link to = "/blogpost">
+                <span><p style={{color: 'black'}}>write blog</p></span>
+              </Link>
               <span><p>sort by</p></span>
-              <span><button>login</button></span>
+              <Link to = "/login">
+                <span><button>login</button></span>
+              </Link>
           </div>
       </div>
   )

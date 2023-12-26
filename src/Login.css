@@ -1,0 +1,44 @@
+.Login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #dcdcdcdc;
+    width: 25%;
+    height: 450px;
+    margin-left: 35%;
+    margin-top: 10%;
+    z-index: -1;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 250px;
+}
+
+.login {
+    margin-bottom: 10px;
+}
+
+.username {
+    margin-bottom: 10px;
+}
+
+.password {
+    margin-bottom: 10px;
+}

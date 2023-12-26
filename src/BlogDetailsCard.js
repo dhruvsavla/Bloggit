@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Blog.css";
+import "./BlogDetailsCard.css";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa6";
 import { HiOutlineShare } from "react-icons/hi";
@@ -8,36 +8,37 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
-import BlogDetails from './BlogDetails';
+import { FiDownload } from "react-icons/fi";
 
-export default function Blog({ id, title, img, description, author, date }) {
+export default function BlogDetailsCard({ id, title, img, blog, author, date }) {
     const [clicked, setClicked] = useState(false);
 
     const handleClick = () => {
         setClicked(!clicked);
     };
-
     return (
-        
-            <div className="product">
-            <Card style={{ margin: '16px' }}>
-            <Link to="/details">
+            <div className="details-card">
+            <Card >
                     <CardMedia
                         component="img"
                         alt="green iguana"
-                        height="200"
+                        height="400"
                         image={img}
                     />
-                    <CardContent>
-                        <Typography style={{ fontWeight: '600', fontSize: 'large', color: 'black' }}>
+                <CardContent>
+                    <Typography style={{fontWeight: 'bolder', fontSize: 'medium', textAlign:'left', marginBottom: '10px'}}>
+                            {author}
+                    </Typography>
+                    <Typography style={{fontWeight: 'bolder', fontSize: 'medium', textAlign:'left', marginBottom: '10px'}}>
+                            {date}
+                    </Typography>
+                    <Typography style={{fontWeight: 'bolder', fontSize: 'x-large', textAlign:'center', marginBottom: '20px'}}>
                             {title}
-                        </Typography>
-                        <Typography style={{ color: 'gray' }}>
-                            {description}
-                        </Typography>
+                    </Typography>
+                    <Typography style={{lineHeight: '2.5'}}>
+                        {blog}
+                    </Typography>
                     </CardContent>
-                    </Link>
                     <CardActions>
                         <div onClick={handleClick}>
                             {clicked ? (
@@ -48,6 +49,7 @@ export default function Blog({ id, title, img, description, author, date }) {
                         </div>
                         <FaRegComments style={{ fontSize: '30px', paddingLeft: '10px', paddingBottom: '5px' }} />
                         <HiOutlineShare style={{ fontSize: '30px', paddingLeft: '10px', paddingBottom: '5px' }} />
+                        <FiDownload style={{ fontSize: '30px', paddingLeft: '10px', paddingBottom: '5px', marginLeft: 'auto'}}/>
                     </CardActions>
                 </Card>
             </div>
